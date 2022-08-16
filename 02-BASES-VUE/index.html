@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Vue.js intro</title>
+</head>
+
+<body>
+    <!-- Control absoluto de este DIV -->
+    <div id="myApp">
+        <h1>Batman quotes, <small>{{newQuote}}</small></h1>
+        <input type="text" v-model="newQuote" v-on:keypress.enter="addQuote">
+
+        <hr>
+
+        <ul>
+            <li v-for="({quote, author}, index) in quotes">
+                <!-- {{quote.author}} -->
+                <!-- <span>{{quoteFor.quote}}</span>
+                <blockquote>{{quoteFor.author}}</blockquote> -->
+                <span>{{index + 1}} - {{quote}}</span>
+                <!-- REFERENCIA IF Y SHOW QUE ME MUESTRA SI ES QUETENGO UN AUTHOR-->
+                <!-- <blockquote v-if="author">- {{author}}</blockquote> -->
+                <blockquote v-show="author">- {{author}}</blockquote>
+            </li>
+        </ul>
+        <!-- {{quotes}} -->
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+    <script src="/02-BASES-VUE/app.js"></script>
+</body>
+
+</html>
