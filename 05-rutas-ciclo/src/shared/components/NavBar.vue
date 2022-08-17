@@ -16,16 +16,20 @@ export default {
   data() {
     return {
       links: [
-        { to: "/home", name: "pokemons" },
-        { to: "/pokemonid/50", name: "por ID" },
-        { to: "/about", name: "About" },
+        { to: "pokemon-home", name: "pokemons" },
+        { to: "pokemon-id", name: "por ID", id: 151 },
+        { to: "pokemon-about", name: "About" },
+
+        { to: "dbz-characters", name: "Personajes" },
+        { to: "dbz-about", name: "DBZ-About" },
+
         { to: "https://google.com", name: "Google" },
       ],
     };
   },
   components: {
     CustomLink: defineAsyncComponent(() => import("./CustomLink.vue")),
-  },
+  }, 
 };
 </script>
 
