@@ -21,7 +21,8 @@ export default {
   },
   data() {
     return {
-      pokemonArr: [jidasiodaks],
+      // pokemonArr: [jidasiodaks],
+      pokemonArr: [],
     };
   },
   methods: {
